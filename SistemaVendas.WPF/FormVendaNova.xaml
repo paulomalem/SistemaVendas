@@ -1,0 +1,50 @@
+﻿<Window x:Class="SistemaVendas.WPF.FormVendaNova"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SistemaVendas.WPF"
+        mc:Ignorable="d"
+        Title="Nova Venda" Height="523.019" Width="658.302" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+    <Grid>
+        <TextBlock x:Name="lblCliente" HorizontalAlignment="Left" Margin="10,29,0,0" TextWrapping="Wrap" Text="Cliente:" VerticalAlignment="Top" TextAlignment="Right" Width="65"/>
+        <ComboBox x:Name="comboCliente" ItemsSource="{Binding ListaCliente}" Loaded="comboCliente_Loaded" SelectionChanged="comboCliente_SelectionChanged" HorizontalAlignment="Left" Margin="80,29,0,0" VerticalAlignment="Top" Width="139" IsEnabled="True">
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding Nome}"/>
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+        </ComboBox>
+        <Button x:Name="btnNovaVenda" Content="Nova Venda" HorizontalAlignment="Left" Margin="253,26,0,0" VerticalAlignment="Top" Width="112" Height="29" Click="btnNovaVenda_Click"/>
+
+        <TextBox x:Name="textCodigoVenda"  IsEnabled="False" HorizontalAlignment="Left" Height="23" Margin="554,196,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="75" Visibility="Hidden"/>
+        <TextBox x:Name="textQuantidade" HorizontalAlignment="Left" Height="23" Margin="80,113,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="71" Visibility="Hidden"/>
+        <TextBox x:Name="textValor" IsEnabled="False" HorizontalAlignment="Left" Height="23" Margin="200,114,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="82" Visibility="Hidden"/>
+        <TextBlock x:Name="lblCdVenda" HorizontalAlignment="Left" Margin="431,197,0,0" TextWrapping="Wrap" Text="Código da Venda :" VerticalAlignment="Top" TextAlignment="Right" Width="118" Height="22" Visibility="Hidden"/>
+        <TextBlock x:Name="lblProduto" HorizontalAlignment="Left" Margin="10,86,0,0" TextWrapping="Wrap" Text="Produto:" VerticalAlignment="Top" TextAlignment="Right" Width="65" Height="22" Visibility="Hidden"/>
+        <TextBlock x:Name="lblQuantidade" HorizontalAlignment="Left" Margin="10,114,0,0" TextWrapping="Wrap" Text="Quantidade:" VerticalAlignment="Top" TextAlignment="Right" Visibility="Hidden"/>
+        <TextBlock x:Name="lblValor" HorizontalAlignment="Left" Margin="156,114,0,0" TextWrapping="Wrap" Text="Valor:" VerticalAlignment="Top" TextAlignment="Right" Width="39" Visibility="Hidden"/>
+        <ComboBox x:Name="comboProduto" SelectionChanged ="comboProduto_SelectionChanged" Loaded="comboProduto_Loaded" HorizontalAlignment="Left" Margin="80,86,0,0" VerticalAlignment="Top" Width="202" Visibility="Hidden">
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding Descricao}"/>
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+        </ComboBox>
+
+        <Button x:Name="btnNovoProduto" Content="Novo Produto" HorizontalAlignment="Left" Margin="80,142,0,0" VerticalAlignment="Top" Width="202" Height="27" Click="btnNovoProduto_Click" Visibility="Hidden"/>
+        <ListView x:Name="listaProdutoVenda" SelectionMode="Single" ItemsSource="{Binding}" HorizontalAlignment="Left" Height="216" Margin="10,224,0,-9" VerticalAlignment="Top" Width="623" Background="White" FontSize="14" TabIndex="2147483643" Visibility="Hidden">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Código" Width="80px" DisplayMemberBinding="{Binding Id}"/>
+                    <GridViewColumn Header="Produto" Width="300px" DisplayMemberBinding="{Binding Descricao}"/>
+                    <GridViewColumn Header="Quantidade" Width="100px" DisplayMemberBinding="{Binding Quantidade}"/>
+                    <GridViewColumn Header="Valor Unitário" Width="140px" DisplayMemberBinding="{Binding Valor}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <TextBlock x:Name="lblValorTotal" HorizontalAlignment="Left" Margin="134,453,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="66" Height="23" Visibility="Hidden"><Run Text="Valor Total"/><Run Text=":"/><LineBreak/><Run/></TextBlock>
+        <TextBox x:Name="textValorTotal" IsEnabled="False" HorizontalAlignment="Left" Height="23" Margin="200,451,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.267,-0.087" Visibility="Hidden"/>
+        <Button x:Name="btnFinalizarVenda" Content="Finalizar Venda" HorizontalAlignment="Left" Margin="10,450,0,0" VerticalAlignment="Top" Width="103" Height="23" Click="btnFinalizarVenda_Click" Visibility="Hidden"/>
+    </Grid>
+</Window>

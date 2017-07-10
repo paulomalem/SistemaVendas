@@ -1,0 +1,23 @@
+﻿<Window x:Class="SistemaVendas.WPF.FormProdutoNovo"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:wpfx="http://schemas.xceed.com/wpf/xaml/toolkit"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SistemaVendas.WPF"
+        mc:Ignorable="d"
+        Title="Cadastro de Produto" Height="214.831" Width="319.703" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+    <Grid>
+        <TextBlock TextAlignment="Right" HorizontalAlignment="Left" Margin="0,23,0,0" TextWrapping="Wrap" Text="Produto:" VerticalAlignment="Top" Width="78"/>
+        <TextBlock TextAlignment="Right" HorizontalAlignment="Left" Margin="0,64,0,0" TextWrapping="Wrap" Text="Quantidade:" VerticalAlignment="Top" Width="78"/>
+        <TextBlock TextAlignment="Right" HorizontalAlignment="Left" Margin="167,67,0,0" TextWrapping="Wrap" Text="Valor:" VerticalAlignment="Top" RenderTransformOrigin="6.521,-3.353"/>
+        <TextBlock TextAlignment="Right" HorizontalAlignment="Left" Margin="26,100,0,0" TextWrapping="Wrap" Text="Código:" VerticalAlignment="Top" Width="52"/>
+        <TextBox x:Name="textDescricao" MaxLength="50" MaxLines="1" HorizontalAlignment="Left" Height="23" Margin="83,23,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="183" UndoLimit="30"/>
+        <TextBox x:Name="textQuantidade" HorizontalAlignment="Left" Height="23" Margin="83,64,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="65" UndoLimit="18" MaxLength="3" MaxLines="1"/>
+        
+        <wpfx:MaskedTextBox x:Name="textValor" HorizontalAlignment="Left" Height="23" Margin="205,64,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="61"/>
+        <TextBox x:Name="textCodigo" HorizontalAlignment="Left" Height="23" Margin="83,99,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="50" IsEnabled="False"/>
+        <Button x:Name="btnSalvar" Content="Salvar" HorizontalAlignment="Left" Margin="83,134,0,0" VerticalAlignment="Top" Width="75" Click="btnSalvar_Click"/>
+        <Button x:Name="btnCancelar" Content="Cancelar" HorizontalAlignment="Left" Margin="191,134,0,0" VerticalAlignment="Top" Width="75" Click="btnCancelar_Click"/>
+    </Grid>
+</Window>
