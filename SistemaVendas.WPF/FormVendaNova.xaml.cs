@@ -207,7 +207,7 @@ namespace SistemaVendas.WPF {
 
                 vendaCtrl.AtualizarVenda(IdVenda, total);
 
-                MessageBox.Show("Parabens!", "Salvo com sucesso", MessageBoxButton.OK);
+                MessageBox.Show("Venda Salva!", "Salvo com sucesso", MessageBoxButton.OK);
 
                 this.Close();
             }

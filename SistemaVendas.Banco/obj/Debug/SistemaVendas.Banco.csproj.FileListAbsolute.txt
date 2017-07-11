@@ -2,3 +2,4 @@ D:\#Dev\#ESL\SistemaVendas\SistemaVendas.Banco\bin\Debug\SistemaVendas.Banco.dll
 D:\#Dev\#ESL\SistemaVendas\SistemaVendas.Banco\bin\Debug\SistemaVendas.Banco.pdb
 D:\#Dev\#ESL\SistemaVendas\SistemaVendas.Banco\obj\Debug\SistemaVendas.Banco.dll
 D:\#Dev\#ESL\SistemaVendas\SistemaVendas.Banco\obj\Debug\SistemaVendas.Banco.pdb
+D:\#Dev\#ESL\SistemaVendas\SistemaVendas.Banco\obj\Debug\SistemaVendas.Banco.csprojResolveAssemblyReference.cache

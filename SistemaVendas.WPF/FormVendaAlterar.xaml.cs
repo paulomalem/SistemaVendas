@@ -123,9 +123,10 @@ namespace SistemaVendas.WPF
         private void btnNovoProduto_Click(object sender, RoutedEventArgs e)
         {
 
-            Produto data = (Produto)comboProduto.SelectedItem;
+            Produto produtoSelecionado = new Produto();
+            produtoSelecionado = (Produto)comboProduto.SelectedItem; //objeto produto
 
-            if (data == null)
+            if (produtoSelecionado == null)
             {
 
                 MessageBox.Show(" Selecione um Produto!");
@@ -142,9 +143,6 @@ namespace SistemaVendas.WPF
                 MessageBox.Show("Preencha os campos corretamente");
                 return;
             }
-
-            Produto produtoSelecionado = new Produto();
-            produtoSelecionado = (Produto)comboProduto.SelectedItem; //objeto produto
 
 
             //CALCULA VALOR TOTAL
@@ -188,7 +186,7 @@ namespace SistemaVendas.WPF
 
                 vendaCtrl.AtualizarVenda(IdVenda, total);
 
-                MessageBox.Show("Parabens!", "Salvo com sucesso", MessageBoxButton.OK);
+                MessageBox.Show("Venda Salva!", "Salvo com sucesso", MessageBoxButton.OK);
 
                 this.Close();
             }
@@ -199,13 +197,11 @@ namespace SistemaVendas.WPF
             itemVendaCtrl.DeletarUnicoItem(id);
         }
 
-
-
         private void btnDeletarProduto_Click(object sender, RoutedEventArgs e)
         {
 
-
-            var objetoItemVenda = (ItemVenda)listaProdutoVenda.SelectedItem;
+            ItemVenda objetoItemVenda = new ItemVenda();
+            objetoItemVenda = (ItemVenda)listaProdutoVenda.SelectedItem;
 
             if (objetoItemVenda == null)
             {
@@ -213,27 +209,23 @@ namespace SistemaVendas.WPF
                 return;
             }
 
-            if (ItemVendas.Remove(objetoItemVenda))
-            {
-                var valorItemVenda = objetoItemVenda.Valor_Produto;
+            int index = ItemVendas.FindIndex(a => a.Id == objetoItemVenda.Id);
 
-                total = total - (objetoItemVenda.Valor_Produto * objetoItemVenda.Quantidade);
-                
-                //DeletarItemVenda(id);
+            ItemVendas.RemoveAt(index);
 
-                listaProdutoVenda.ItemsSource = null;
+            var valorItemVenda = objetoItemVenda.Valor_Produto;
 
-                listaProdutoVenda.ItemsSource = ItemVendas;
+            total = total - (objetoItemVenda.Valor_Produto * objetoItemVenda.Quantidade);
 
-                textValorTotal.Text = (total).ToString();
+            //DeletarItemVenda(id);
 
-            }
-            
+            listaProdutoVenda.ItemsSource = null;
 
+            listaProdutoVenda.ItemsSource = ItemVendas;
+
+            textValorTotal.Text = (total).ToString();
 
         }
-
-
 
         private void textData_TextChanged(object sender, TextChangedEventArgs e)
         {
