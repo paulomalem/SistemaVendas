@@ -3,3 +3,8 @@ D:\#Dev\#ESL\SistemaVendas\SistemaVendas.Banco\bin\Debug\SistemaVendas.Banco.pdb
 D:\#Dev\#ESL\SistemaVendas\SistemaVendas.Banco\obj\Debug\SistemaVendas.Banco.dll
 D:\#Dev\#ESL\SistemaVendas\SistemaVendas.Banco\obj\Debug\SistemaVendas.Banco.pdb
 D:\#Dev\#ESL\SistemaVendas\SistemaVendas.Banco\obj\Debug\SistemaVendas.Banco.csprojResolveAssemblyReference.cache
+E:\#Paulo\SistemaVendas\SistemaVendas.Banco\bin\Debug\SistemaVendas.Banco.dll
+E:\#Paulo\SistemaVendas\SistemaVendas.Banco\bin\Debug\SistemaVendas.Banco.pdb
+E:\#Paulo\SistemaVendas\SistemaVendas.Banco\obj\Debug\SistemaVendas.Banco.csprojResolveAssemblyReference.cache
+E:\#Paulo\SistemaVendas\SistemaVendas.Banco\obj\Debug\SistemaVendas.Banco.dll
+E:\#Paulo\SistemaVendas\SistemaVendas.Banco\obj\Debug\SistemaVendas.Banco.pdb

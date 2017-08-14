@@ -53,3 +53,9 @@ using System.Windows;
 // [assembly: AssemblyVersion("1.0.*")]
 [assembly: AssemblyVersion("1.0.0.0")]
 [assembly: AssemblyFileVersion("1.0.0.0")]
+[assembly: InternalsVisibleTo("SistemaVendas.WPF.Tests")]
+[assembly: InternalsVisibleTo("SistemaVendas.WPF.Explorables")]
+[assembly: InternalsVisibleTo("SistemaVendas.WPF.DAO.Tests")]
+[assembly: InternalsVisibleTo("SistemaVendas.WPF.Controllers.Tests")]
+[assembly: InternalsVisibleTo("SistemaVendas.WPF.Controller.Tests")]
+
