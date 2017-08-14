@@ -18,8 +18,9 @@ namespace SistemaVendas.Banco
         public SqlConnection Conexao()
         {
             // STRING DE CONEXÃO PARA DB LOCAL
-            con = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=D:\\#Dev\\#ESL\\SistemaVendas\\SistemaVendas.Banco\\Database.mdf;Integrated Security=True");
-            //                                                                                \\D:\\#Dev\\#ESL\\
+            con = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=E:\\#Paulo\\SistemaVendas\\SistemaVendas.Banco\\Database.mdf;Integrated Security=True");
+            //                                                                               
+            //                                                                                 E:\\#Paulo\\SistemaVendas\\
             //                                                                                 Este pedaço do código antes da pasta
             //                                                                                 \\SistemaVendas deverá estar preenchido
             //                                                                                 Com o diretório que você colocou o projeto
